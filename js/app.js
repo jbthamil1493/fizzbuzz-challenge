@@ -1,5 +1,7 @@
 fizzbuzz(100);
 
+var ask = prompt("Supply a number!");
+
 function fizzbuzz(numberOfElements) {
 
 for (var i = 1; i <= numberOfElements; i = i + 1) {
@@ -19,3 +21,17 @@ for (var i = 1; i <= numberOfElements; i = i + 1) {
 }
 
 }
+
+function count(ask) {
+	return ask;
+}
+
+$(document).write (ask(1));
+
+function supply () {
+	count(ask);
+	fizzbuzz(numberOfElements);
+}
+
+count(ask);
+
