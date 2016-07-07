@@ -1,37 +1,30 @@
-fizzbuzz(100);
+$(document).ready(function() {
 
-var ask = prompt("Supply a number!");
+	$('button').click(function() {
+		var chosenNumber = $('input').val();
+		fizzbuzz(chosenNumber);
+	});
 
-function fizzbuzz(numberOfElements) {
+	function fizzbuzz(chosenNumber) {
 
-for (var i = 1; i <= numberOfElements; i = i + 1) {
+		$('ul').empty();
 
-	if (i % 3 === 0 && i % 5 === 0) {
-		$('ul').append('<li>fizzbuzz</li>');
+	for (var i = 1; i <= chosenNumber; i++) {
+
+		if (i % 3 === 0 && i % 5 === 0) {
+			$('ul').append('<li>fizzbuzz</li>');
 	
-	}else if (i % 3 === 0) {
-		$('ul').append('<li>fizz</li>');
+		}else if (i % 3 === 0) {
+			$('ul').append('<li>fizz</li>');
 	
-	}else if (i % 5 === 0) {
-		$('ul').append('<li>buzz</li>');
+		}else if (i % 5 === 0) {
+			$('ul').append('<li>buzz</li>');
 	
-	}else {
-		$('ul').append('<li>' + i + '</li>');
+		}else {
+			$('ul').append('<li>' + i + '</li>');
+		}
 	}
-}
 
-}
+	}
 
-function count(ask) {
-	return ask;
-}
-
-$(document).write (ask(1));
-
-function supply () {
-	count(ask);
-	fizzbuzz(numberOfElements);
-}
-
-count(ask);
-
+});
